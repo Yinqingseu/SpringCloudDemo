@@ -1,5 +1,6 @@
-package com.yinqing.feign;
+package com.yinqing.feign.web;
 
+import com.yinqing.feign.service.SchedualServiceHi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -13,7 +14,7 @@ public class HiController {
 
     @RequestMapping(value="/hi",method = RequestMethod.GET)
     public String sayHi(@RequestParam String name){
-        return schedualServiceHi.sayHiFromClientone(name);
+        return schedualServiceHi.sayHiFromClientOne(name);
     }
 
 }
